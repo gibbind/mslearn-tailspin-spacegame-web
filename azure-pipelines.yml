@@ -13,6 +13,9 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- bash: |
+    echo "Hello World"
+    
 - task: UseDotNet@2
   displayName: 'Use .NET SDK 6.x'
   inputs:
