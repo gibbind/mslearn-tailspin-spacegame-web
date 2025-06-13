@@ -45,7 +45,7 @@ steps:
     vstsFeed: '$(System.TeamProject)/Tailspin.SpaceGame.Web.Models'
 
 - task: DotNetCoreCLI@2
-  displayName: 'Build the project - $(buildConfiguration)'
+  displayName: 'Build the project - Release'
   inputs:
     command: 'build'
     arguments: '--no-restore --configuration $(buildConfiguration)'
