@@ -36,6 +36,9 @@ steps:
   displayName: 'Write build info'
   workingDirectory: $(wwwrootDir)
 
+# Authenticate with NuGet to ensure credentials are refreshed
+- task: NuGetAuthenticate@1
+
 - task: NuGetCommand@2
   displayName: 'Restore project dependencies'
   inputs:
