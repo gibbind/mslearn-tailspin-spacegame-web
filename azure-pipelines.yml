@@ -2,14 +2,14 @@ trigger:
 - '*'
 
 pool:
-  vmImage: 'ubuntu-22.04'
+  vmImage: 'ubuntu-20.04'
   demands:
   - npm
 
 variables:
   buildConfiguration: 'Release'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-  dotnetSdkVersion: '8.x'
+  dotnetSdkVersion: '6.x'
 
 steps:
 - task: UseDotNet@2
@@ -45,7 +45,7 @@ steps:
     vstsFeed: '$(System.TeamProject)/Tailspin.SpaceGame.Web.Models'
 
 - task: DotNetCoreCLI@2
-  displayName: 'Build the project - Release'
+  displayName: 'Build the project - $(buildConfiguration)'
   inputs:
     command: 'build'
     arguments: '--no-restore --configuration $(buildConfiguration)'
