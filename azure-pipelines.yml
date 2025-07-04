@@ -41,7 +41,7 @@ steps:
   displayName: 'Restore project dependencies'
   inputs:
      command: restore
-     projects: '$(solution)'
+     projects: '**/*.csproj'
      feedsToUse: 'select'
      vstsFeed: '$(System.TeamProject)/Tailspin.SpaceGame.Web.Models'
 
