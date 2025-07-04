@@ -43,7 +43,7 @@ steps:
      command: restore
      projects: '**/*.csproj'
      feedsToUse: 'select'
-     vstsFeed: '$(System.TeamProject)/Tailspin.SpaceGame.Web.Models'
+     vstsFeed: '8f36b48f-d8be-41dc-ae60-19ec47736703/Tailspin.SpaceGame.Web.Models'
 
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
